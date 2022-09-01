@@ -48,6 +48,19 @@ class BasicTestSuite(unittest.TestCase):
         trie.delete(s3)
         self.assertFalse(trie.search(s3))
 
+    def test_get_prefix_string(self):
+        s1 = 'abc'
+        s2 = 'abcd'
+        prefix1 = 'ab'
+        prefix2 = 'xyz'
+        trie = Trie()
+        trie.insert(s1)
+        trie.insert(s2)
+        self.assertTrue(s1 in trie.get_prefix_string(prefix1))
+        self.assertTrue(s2 in trie.get_prefix_string(prefix1))
+        self.assertEqual(len(trie.get_prefix_string(prefix1)), 2)
+        self.assertEqual(trie.get_prefix_string(prefix2), False)
+
 
 if __name__ == '__main__':
     unittest.main()
