@@ -56,10 +56,10 @@ class BasicTestSuite(unittest.TestCase):
         trie = Trie()
         trie.insert(s1)
         trie.insert(s2)
-        self.assertTrue(s1 in trie.get_prefix_string(prefix1))
-        self.assertTrue(s2 in trie.get_prefix_string(prefix1))
-        self.assertEqual(len(trie.get_prefix_string(prefix1)), 2)
-        self.assertEqual(trie.get_prefix_string(prefix2), False)
+        self.assertTrue(s1 in trie.get_strings_with_prefix(prefix1))
+        self.assertTrue(s2 in trie.get_strings_with_prefix(prefix1))
+        self.assertEqual(len(trie.get_strings_with_prefix(prefix1)), 2)
+        self.assertEqual(trie.get_strings_with_prefix(prefix2), False)
 
 
 if __name__ == '__main__':

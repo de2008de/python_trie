@@ -40,7 +40,7 @@ class Trie:
                 return prev.is_end
         return False
 
-    def get_prefix_string(self, prefix):
+    def get_strings_with_prefix(self, prefix):
         if not self.root.has_next(prefix[0]):
             return False
         prev = self.root.next[prefix[0]]
