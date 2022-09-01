@@ -2,8 +2,6 @@
 <img src="cover.svg" width="300">
 </h1><br>
 
----
-
 Simple Trie package for learning purpose.
 
 # Project Structure
