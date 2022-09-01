@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="" width="300">
+<img src="cover.svg" width="300">
 </h1><br>
 
 ---
