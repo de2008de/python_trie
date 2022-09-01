@@ -4,6 +4,8 @@
 
 Simple Trie package for learning purpose.
 
+Trie is also called Prefix Tree, where each node of the Trie stores a character. By searching this tree, we can know whether a string with the prefix or the string itself exists efficiently.
+
 # Project Structure
 
 The project structure follow the recommendation from:
