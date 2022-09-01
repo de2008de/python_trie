@@ -51,14 +51,21 @@ class BasicTestSuite(unittest.TestCase):
     def test_get_prefix_string(self):
         s1 = 'abc'
         s2 = 'abcd'
+        s3 = 'bcd'
         prefix1 = 'ab'
         prefix2 = 'xyz'
+        prefix3 = 'bc'
         trie = Trie()
         trie.insert(s1)
         trie.insert(s2)
+        trie.insert(s3)
         self.assertTrue(s1 in trie.get_strings_with_prefix(prefix1))
         self.assertTrue(s2 in trie.get_strings_with_prefix(prefix1))
         self.assertEqual(len(trie.get_strings_with_prefix(prefix1)), 2)
+
+        self.assertTrue(s3 in trie.get_strings_with_prefix(prefix3))
+        self.assertEqual(len(trie.get_strings_with_prefix(prefix3)), 1)
+
         self.assertEqual(trie.get_strings_with_prefix(prefix2), False)
 
 
